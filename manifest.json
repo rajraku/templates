@@ -2,12 +2,12 @@
   "name": "Shared Templates",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension helps in pasting most comonly used templates in an email template",
+  "description": "This extension helps in pasting most comonly used templates in an email",
   "homepage_url": "http://extensionizr.com",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/mail_post_to16.png",
+    "48": "icons/mail_post_to48.png",
+    "128": "icons/mail_post_to128.png"
   },
   "default_locale": "en",
   "background": {
@@ -15,8 +15,8 @@
     "persistent": true
   },
   "page_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "page action demo",
+    "default_icon": "icons/mail_post_to19.png",
+    "default_title": "Download saved templates",
     "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [

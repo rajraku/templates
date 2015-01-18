@@ -1,4 +1,6 @@
 <!doctype html>
+<html ng-app="templatesApp" ng-csp>
+<head>
 <style type="text/css">
 	#mainPopup {
 		padding: 10px;
@@ -10,10 +12,19 @@
 		font-size: 2em;
 	}
 </style>
-
+<script language="javascript" type="text/javascript" src="../../js/jquery.min.js"></script>
 <script language="javascript" type="text/javascript" src="../../js/angular.min.js"></script>
-
-<div id="mainPopup" ng-app="templates">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/page_action/page_action.html. The CSS is there, too.</p>
+<script language="javascript" type="text/javascript" src="../../js/app.js"></script>
+</head>
+<body>
+<div id="mainPopup" ng-controller="TemplatesController">
+<h1>Saved Templates!</h1>
+<div>
+	<input type="text" ng-model="searchTerm.name" placeholder="Search...." />
 </div>
+<ul>
+	<li ng-repeat="template in templatesData | filter:searchTerm:strict"><a href="#" ng-click="copyTemplateValue(template)">{{template.name}}</a></li>
+</ul>
+</div>
+</body>
+</html>
